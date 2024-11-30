@@ -473,12 +473,10 @@ nav ul li a:hover {
   border-radius: 10px 32px;
   margin-top: 16px;
   font-size: 1rem;
-}
-
-.product-btn a {
-  text-decoration: none;
   color: #ffff;
 }
+
+
 
 .product-btn:hover {
   box-shadow: 0 0 0px 1px #39f2ae,
@@ -1196,6 +1194,7 @@ p {
   flex-direction: column;
   padding: 0 1.5rem;
   color: #f5f5f5f5;
+ 
 }
 
 .contacto_titulo {
@@ -1263,10 +1262,13 @@ select.custom {
   background-color: transparent;
 }
 
-.contacto_submit_boton {
-  width: 50%;
+.form_botones{
   display: flex;
-  align-self: center;
+  justify-content: space-around;
+}
+
+.contacto_submit_boton {
+  width: 40%;
   padding: 15px 35px;
   background-color: transparent;
   border-radius: 50px;
@@ -1362,3 +1364,46 @@ select.custom {
 .margenAbajo {
   margin-bottom: 80px;
 }
+
+/*Estilos para la pagina del carrito de compras */
+/*contenedor principal de la lista carrito */
+#lista-carrito {
+  width:60%;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #39f2ae;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Cada producto dentro del carrito */
+#lista-carrito div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #39f2ae;
+  padding-bottom:40px;
+}
+
+#lista-carrito img{
+  width:180px;
+  height: auto;
+  object-fit: cover;
+}
+
+#lista-carrito h3{
+  font-size: 1.3rem;
+  color:#39f2ae
+}
+#lista-carrito p{
+  font-size: 1.1rem;
+  color:#ffff;
+  margin-top:-30px;
+}
+
+
+
+

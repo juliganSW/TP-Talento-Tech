@@ -12,39 +12,39 @@
       <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-   <header>
-    <div class="info-bar">
-        <p>12 CUOTAS SÍN INTERES | 15% OFF POR TRANSFERENCIA</p>
-    </div>
-    <nav>
-        <div class="logo-container">
-           <a href="#"><img src="../assets/img/logo_goodstone_store.png" alt="Logo-Empresa" class="logo"></a>
+    <header class="header">
+        <div class="infoBar" >
+            <p>12 CUOTAS SÍN INTERES | 15% OFF POR TRANSFERENCIA</p>
         </div>
-        
-        <div class="nav-izquierda">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#colecciones">Colecciones</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                </li>
-            </ul>
-        </div>
+        <nav class="navbar">
+            <div class="logoContainer">
+              <a href="../index.html"><img src="../assets/img/logo_goodstone_store.png" alt="Logo-Empresa" class="logo"></a>
+           </div>
+             <div>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../index.html">Colecciones</a></li>
+                    <li><a href="../pages/contacto.html">Contacto</a></li>
+                    <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a><span id="contadorCarrito">0</span></li>
+                </ul>
+            </div>
+       </nav>
+    </header>
+  <main>
+    <section class="carrito">
+        <div id="carrito">
 
-        <div class="nav-derecha">
-            <ul>
-                <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
+            <h1>Carrito de Compras</h1>
+            
+            <div id="lista-carrito">
+                <!--contenedor principal del carrito-->
+                </div>
+          
+           
+            
+             <button id="vaciar-carrito">Vaciar Carrito</button> 
         </div>
-    </nav>
-</header>
-   
-   </header>
-
-   <main>
-    <section>
-        <!--contenido principal con sus secciones-->
 
     </section>
    </main>
@@ -53,6 +53,6 @@
     <!--Espacion para el footer-->
 
    </footer>
-    
+   <script  src="../js/app.js"></script>
 </body>
 </html>
