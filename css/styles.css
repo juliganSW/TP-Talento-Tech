@@ -1455,6 +1455,41 @@ select.custom {
    
 }
 
+/*Estilos para la seccion de la api */
+
+.api_chuck{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+ img{
+    width: 200px;
+    filter: drop-shadow(1px 1px 3px #39f2ae);
+    margin-bottom: 1rem;
+    cursor: pointer
+  }
+
+  p{
+    font-size: 1.2rem;
+    font-style: italic;
+    color:#39f2ae;
+    padding:0px 50px;
+}
+img:hover{
+  animation: shake 0.5s;
+}
+
+}
+/*animacion para chuck*/
+@keyframes shake {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-5px); }
+  50% { transform: translateY(5px); }
+  75% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
  
 
   
