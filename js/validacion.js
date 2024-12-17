@@ -1,8 +1,13 @@
+const miFormulario = document.getElementById("form");
+const botonEnviar = document.getElementById('btn-enviar');
+
+botonEnviar.addEventListener('click', validarFormulario);
+
 //Funcion para validar el formulario
 function validarFormulario(event){
- event.preventDefault();
+event.preventDefault();
 
-//obtengo los valores de los inputs del formulario 
+//obtengo los valores de los inputs del formulario y los guardo en las variables
 let nombre = document.getElementById("nombre").value.trim();
 let apellido = document.getElementById("apellido").value.trim();
 let email = document.getElementById("email").value.trim();
@@ -71,7 +76,7 @@ if(descripcion.trim().length < 10){
 //Cuando las validaciones se dan con exito, se procede a enviar el formulario 
 if(esValido){
  alert("Formulario enviado con éxito 👍");
- let miFormulario = document.getElementById("form"); 
+ //let miFormulario = document.getElementById("form"); 
  miFormulario.submit();
  miFormulario.reset();
  }

@@ -14,7 +14,7 @@
         <div class="infoBar">
             <p>12 CUOTAS SÍN INTERES | 15% OFF POR TRANSFERENCIA</p>
         </div>
-       <nav>
+       <nav class="navbar">
             <div class="logoContainer">
               <a href="../index.html"><img src="../assets/img/logo_goodstone_store.png" alt="Logo-Empresa" class="logo"></a>
            </div>
@@ -24,7 +24,7 @@
                     <li><a href="../index.html">Colecciones</a></li>
                     <li><a href="./contacto.html">Contacto</a></li>
                     <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                    <li><a href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                  </ul>
             </div>
         </nav>
@@ -37,7 +37,7 @@
                 <div class="contenedor_form">
                     <h1 class="contacto_titulo">Contactate con nosotros</h1>
                    
-                    <form action="" method="" class="contacto_form" id="form" onsubmit="validarFormulario(event)">
+                    <form action="" method="" class="contacto_form" id="form">
                         <div class="form_input_linea">
                             <label for="nombre" class="contacto_label">Nombre</label>
                             <input type="text" name="nombre" id="nombre" class="contacto_input">
@@ -69,7 +69,7 @@
                             <span id="mensajeDescripcion"></span>
                         </div>
                         <div class="form_botones">
-                        <button type="submit" class="contacto_submit_boton">Enviar</button>
+                        <button type="submit" class="contacto_submit_boton" id="btn-enviar">Enviar</button>
                         <button type="reset"  class="contacto_submit_boton">Limpiar</button>
                         </div>
                     </form>
