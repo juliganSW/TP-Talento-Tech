@@ -8,10 +8,10 @@ boton.addEventListener("click", getData);
 async function getData(){
     try{
     const data = await fetch( "https://api.chucknorris.io/jokes/random");
-    const json = await data.json();
-    console.log(json);
+    const datos = await data.json();
+    console.log(datos);
    
-    frase.textContent = json.value
+    frase.textContent = datos.value
 }
 catch(err){
     console.error(err);
