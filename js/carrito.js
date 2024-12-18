@@ -1,12 +1,10 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-   
-    
-    const botonesAgregar = document.querySelectorAll(".agregar-btn");
+
+   const botonesAgregar = document.querySelectorAll(".agregar-btn");
     botonesAgregar.forEach(function (boton) {
         boton.addEventListener('click', (event)=>{
             event.preventDefault()
-    
     
      //Se crea el objeto reloj con los atributos
      const reloj = {
@@ -18,9 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     carrito.push(reloj);
+    alert(reloj.modelo + " se agregó al carrito")
 
-    //guardar en local storage
-    //solo recibe datos en string
+    //guardar en local storage, solo recibe datos en string
     localStorage.setItem('carrito', JSON.stringify(carrito));
     actualizarCarrito();
     })
@@ -46,6 +44,10 @@ function actualizarCarrito() {
         mensajeCarrito.className = 'carrito-vacio';
         //Muestra el mensaje del carrito vacio 
         listaDeCompras.appendChild(mensajeCarrito);
+
+        // limpio el total cuando elimino todos los productos
+        let listaTotal = document.getElementById('total-carrito');
+        listaTotal.innerHTML = ""; // Limpia el contenido previo
         return; // se pone return para que se corte la función acá,
     }
 
@@ -54,9 +56,7 @@ function actualizarCarrito() {
     //Debo dejar en cero el total antes de entrar al bucle, si quiero hacer la suma
     let totalCarrito = 0;
     carrito.forEach(function (reloj) {
-        
-
-        //Crea un elemento <div> por cada producto agregado 
+        //Crea un elemento <table> por cada producto agregado 
         let listaItem = document.createElement('table');
 
         listaItem.innerHTML = `
@@ -79,13 +79,7 @@ function actualizarCarrito() {
             eliminarProducto(reloj.id);
         });
 
-
-        //le paso la llamada a la funcion con el id del producto
-        // botonEliminar.onclick = function () {
-        //     eliminarProducto(reloj.id);
-        // };
-
-        // Se agrega el botón eliminar
+       // Se agrega el botón eliminar
         listaItem.appendChild(botonEliminar);
 
         //Se agrega el nuevo item a la lista de compras del carrito 
@@ -117,9 +111,9 @@ function eliminarProducto(relojId) {
 document.getElementById('vaciar-carrito').addEventListener('click', function () {
     localStorage.removeItem("carrito");
 
-    // Limpia correctamente el total del carrito
-    const listaTotal = document.getElementById('total-carrito');
-    listaTotal.innerHTML = "";
+    // limpia el total del carrito
+     let listaTotal = document.getElementById('total-carrito');
+     listaTotal.innerHTML = "";
     actualizarCarrito();
 });
 
