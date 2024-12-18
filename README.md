@@ -22,8 +22,8 @@
 
 ### 1. Carrito de compras
 
-- **Agregar productos**: Los usuarios pueden agregar productos al carrito con un solo click.Pueden hacerlo desde la página principal y tambien desde las secciones "Coleccion Hombre" y "Coleccion Mujer"
-- **Eliminar productos**: Cada producto tiene un botón para eliminarlo individualmente.
+- **Agregar productos**: Los usuarios pueden agregar productos al carrito con un solo click.Pueden hacerlo desde las secciones "Coleccion Hombre" y "Coleccion Mujer"
+- **Eliminar productos**: Cada producto tiene un botón para eliminarlo individualmente del carrito.
 - **Vaciar carrito**: Limpia todos los productos del carrito y actualiza el total.
 - **Cálculo del total**: Muestra el precio total de los productos en el carrito.
 
