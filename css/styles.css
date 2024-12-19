@@ -34,7 +34,7 @@ body {
   z-index: 1000; /*z-index muy alto para asegurar que esté por encima de otros elementos */
    p {
     color: white;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-style: oblique;
   }
 }
@@ -482,6 +482,15 @@ nav ul li a:hover {
     inset 0 0 0px 1px #39f2ae,
     inset 0 0 15px 2px #39f2ae;
 }
+/*media queries para destacados*/
+@media only screen and (max-width:640px){
+  .headline{
+    padding: 10px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+}
 
 /*estilos para la seccion colecciones*/
 .coleccionContainer {
@@ -550,7 +559,7 @@ nav ul li a:hover {
 
 /*media queries seccion coleccion*/
 /*dispositivos pequeños*/
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .coleccionContainer {
       flex-direction: column;
       align-items: center;
@@ -577,7 +586,7 @@ nav ul li a:hover {
 }
 
 /*media queries para dispositivos medianos*/
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .coleccionContainer {
     flex-direction: column; 
      width: 80%; 
@@ -596,9 +605,9 @@ nav ul li a:hover {
   }
 }
  .btnColeccion {
-    top: 80%;
+    top: 75%;
     width: 35%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 8px 6px;
   }
 
@@ -726,6 +735,7 @@ p {
   }
   .nosotrosTexto h2 {
     font-size: 1.4rem; 
+    line-height: 1.5;
   }
   .nosotrosTexto p {
    line-height: 1.4;
@@ -745,7 +755,7 @@ p {
 
   .nosotrosTexto {
     padding: 16px;
-    
+
     h2 {
       font-size: 1.4rem; 
     }
@@ -1287,7 +1297,7 @@ select.custom {
 
 .contacto_submit_boton {
   width: 40%;
-  padding: 15px 35px;
+  padding: 15px ;
   background-color: transparent;
   border-radius: 50px;
   color: #f2f2f2;
@@ -1301,6 +1311,42 @@ select.custom {
   background-color: #39f2ae;
   color: black;
 }
+
+
+/**media queries para la pagina de contacto**/
+/**dispositivos pequeños **/
+@media only screen and (max-width:768px){
+  .contactoHeader .cubierta {
+    top:-210px
+  }
+  .contactoHeader .menuLateral{
+    left:-300px
+  }
+  
+
+ .contenedor_img{
+    display: none;
+  }
+
+  .contenedor_form{
+    width: 100%;
+  }
+  .contacto_submit_boton{
+    font-size: 1rem;
+    padding: 10px;
+  }
+  
+}
+@media only screen and (min-width:769px) and (max-width:1024px){
+  .contenedor_img{
+    display:none;
+  }
+  .contenedor_form{
+    width: 100%;
+  }
+}
+
+
 
 /***********Fin de página de contacto**********/
 
@@ -1360,6 +1406,22 @@ select.custom {
   padding: 0 32px 40px 32px;
 }
 
+/**Media Queries para la seccion mujeres**/
+@media only screen and (max-width:768px){
+  .banner{
+    display: none;
+  }
+  .header .cubierta{
+    top:-10px
+ }
+ .header .menuLateral{
+  left:-300px
+ }
+
+
+
+}
+
 /***********Fin de la página coleccion mujer**********/
 
 /***********Inicio de la página coleccion hombre**********/
@@ -1383,12 +1445,24 @@ select.custom {
   margin-bottom: 80px;
 }
 
-/*Estilos para la pagina del carrito de compras */
-   #carrito{
-    h1{
-      text-align: center;
-    }
+/**Media Queries para la seccion hombres**/
+@media only screen and (max-width:768px){
+  .bannerMan{
+    display: none;
   }
+ 
+  }
+  
+  
+
+
+/*Estilos para la pagina del carrito de compras */
+.carrito h1{
+  margin-top: 40px;
+  text-align: center;
+  font-size: 2.3rem;
+}
+   
   /*contenedor principal de la lista carrito */
    #lista-carrito {
     width:50%;
@@ -1455,8 +1529,21 @@ select.custom {
    
 }
 
-/*Estilos para la seccion de la api */
+/**Media Queries para la página del carrito**/
+@media only screen and (max-width:768px){
+  .carrito {
+    margin-top: 10px;
+    text-align: center;
+    padding:10px
+  }
 
+  #lista-carrito img{
+    display: none;
+  
+  }
+}
+   
+/*Estilos para la seccion de la api */
 .api_chuck{
   display: flex;
   flex-direction: column;
